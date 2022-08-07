@@ -17,6 +17,9 @@ body::before{
   z-index:-10;
   opacity:0.5;
 }
+
+
+
 /* ------------------------------ */
 /* ---------- NAVBAR ------------ */
 /* ------------------------------ */
@@ -46,6 +49,27 @@ padding-inline:50px;
   padding:10px 30px;
   color: #fff;
   font-size:medium;
+}
+@media only screen and (max-width:900px) {
+  .list{
+    display: none;
+  }
+  .button-small{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar:nth-child(1)::after{
+    content: "";
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background-color: #fff;
+    background-image: url(./assets/hamburger-menu-svgrepo-com.svg);
+    background-size:40px 40px;
+  }
 }
 /* ------------------------------ */
 /* ---------- HERO ------------ */
@@ -77,4 +101,16 @@ padding-inline:50px;
   position:absolute;
   top:75%;
   left:80%;
+}
+@media only screen and (max-width:900px) {
+  .hero-heading{
+    font-size: 40px;
+  }
+  .button-large{
+    margin-top:50px;
+  }
+  .bottom>div img{
+    position:static;
+    margin-top:50px;
+  }
 }
